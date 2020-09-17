@@ -1,0 +1,93 @@
+<!--PSEUDOCODE
+   SEQUENCE:
+
+   DISPLAY Greeting
+   DISPLAY Level difficulty
+   READ Game difficulty chosen
+   DISPLAY Level chosen
+   DETERMINE Random Number
+   GET Number chosen by player
+   DETERMINE if the number is right or not
+   DISPLAY If the guessed number is smaller or larger
+   GET Right Number
+   DISPLAY Win the game
+   Get Wrong answer multiple time
+   DISPLAY Lost the game
+
+   IF-THEN-ELSE
+   
+    CHOOSING LEVEL DIFFICULTY
+
+   If Very easy Then
+        Very easy game
+    ELSE IF Easy
+        Easy game
+    ElSE IF Medium
+        Medium game
+    ELSE IF Difficult
+        Difficult game
+    ELSE 
+        Very Difficult game
+
+    GUESSED NUMBER
+
+    If Right Answer Then
+    Win the game
+    ELSE Retry
+     
+    WHILE
+
+    WHILE Guessed Number != Random number
+        GET another try
+    ENDWHILE
+
+
+
+    
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Best game EVER</title>
+    </head>
+    <body>
+    
+        
+        <h1 id="game_text">THE BEST GAME EVER</h1>
+        <h2 id="difficulty_text">CHOSE A DIFFCULTY</h2>
+        <form>
+    
+        <div class="row">
+            <div id="difficulty" class="col-md-12">
+                <label>Difficulty</label>
+                <select>
+                    <option value="Select">Select</option>
+                    <option value="Very_easy">Very Easy</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Difficult">Difficult</option>
+                    <option value="Very_Difficult">Very Difficult</option>
+                </select>
+            </div>
+            <div id="Guess" class="col-md-4">
+                <label>Guess a Number!</label>
+                    <input id="GuessValue" class="form-control" type="number" value="" name="GuessValue" min="0" oninput="validity.valid||(value='');"/>
+
+             </div>   
+            
+        </form>    
+        
+        
+        <script src="js/jquery/jquery-3.3.1.min.js"></script>
+        <script> 
+        $("#game_text").hide();
+        $("#difficulty_text").hide();
+        $("#game_text").slideDown(1000);
+        $("#difficulty_text").fadeIn(3000);       
+        </script>
+        
+    </body>
+</html>
