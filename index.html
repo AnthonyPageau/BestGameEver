@@ -61,11 +61,11 @@
         <form>
     
         <div class="row">
-            <div id="difficulty" class="col-md-12">
+            <div id="Difficulty" class="col-md-12">
                 <label>Difficulty</label>
                 <select>
                     <option value="Select">Select</option>
-                    <option value="Very_easy">Very Easy</option>
+                    <option value="Very_Easy">Very Easy</option>
                     <option value="Easy">Easy</option>
                     <option value="Medium">Medium</option>
                     <option value="Difficult">Difficult</option>
@@ -74,20 +74,20 @@
             </div>
             <div id="Guess" class="col-md-4">
                 <label>Guess a Number!</label>
-                    <input id="GuessValue" class="form-control" type="number" value="" name="GuessValue" min="0" oninput="validity.valid||(value='');"/>
-
-             </div>   
+                    <input id="GuessValue" placeholder="1-10" class="form-control" type="number" value="" name="GuessValue" min="0" oninput="validity.valid||(value='');"/>
+            </div> 
+         
+            <button onclick="goodluck()" type="button" id="GoodLuck">  Good Luck</button>
+            <div id="Random" class="col-md-4">
+                <label>Random</label>
+                    <input id="RandomValue" class="form-control" type="number" value="" name="RandomValue" readonly />  
+        <h2 id="won"> YOU WON!!!!!</h2>        
+        <h2 id="lost"> YOU LOST SORRY :(</h2>        
             
         </form>    
         
         
         <script src="js/jquery/jquery-3.3.1.min.js"></script>
-        <script> 
-        $("#game_text").hide();
-        $("#difficulty_text").hide();
-        $("#game_text").slideDown(1000);
-        $("#difficulty_text").fadeIn(3000);       
-        </script>
-        
+        <script src="/js/game.js"></script>        
     </body>
 </html>
