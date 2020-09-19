@@ -51,6 +51,9 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href= "css/bootstrap.min.css" rel= "stylesheet">
         <title>Best game EVER</title>
     </head>
     <body>
@@ -75,15 +78,19 @@
             <div id="Guess" class="col-md-4">
                 <label>Guess a Number!</label>
                     <input id="GuessValue" placeholder="1-10" class="form-control" type="number" value="" name="GuessValue" min="0" oninput="validity.valid||(value='');"/>
-            </div> 
-         
-            <button onclick="goodluck()" type="button" id="GoodLuck">  Good Luck</button>
+            </div>
+            <div id="Tries" class="col-md-4">
+                <label>Tries Left</label>
+                    <input id="TriesValue" class="form-control" type="number" value="" name="TriesValue" min = '0' readonly oninput="validity.valid||(value='');"/>  
+            </div>
+            <button onclick="goodluck()" class="btn btn-primary" type="button" id="GoodLuck">  Good Luck</button>
             <div id="Random" class="col-md-4">
                 <label>Random</label>
-                    <input id="RandomValue" class="form-control" type="number" value="" name="RandomValue" readonly />  
-        <h2 id="won"> YOU WON!!!!!</h2>        
-        <h2 id="lost"> YOU LOST SORRY :(</h2>        
-            
+                    <input id="RandomValue" class="form-control" type="number" value="" name="RandomValue" readonly />
+            </div>  
+            <button onclick="endGame()" class="btn btn-success" type="button" id="New">  NEW GAME</button>
+            <button onclick="endGame()" class="btn btn-danger" type="button" id="End">  END</button>
+            <h2 id="Hint"></h2>       
         </form>    
         
         
